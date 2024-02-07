@@ -18,7 +18,7 @@ console.log("Seu pagamento caiu! Agora há R$", saldo, "em sua conta", banco, "!
 saldo = saldo - 500;
 console.log("Você efetuou uma transferência no valor de R$500,00! Agora há", saldo, "em sua conta", banco, "!");
 
-saldo = saldo + 300
+saldo = saldo + 300;
 console.log("Você recebeu um bônus de R$300,00! Agora há R$", saldo, "em sua conta", banco, "!");
 console.log("")
 
