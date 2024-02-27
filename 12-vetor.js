@@ -39,3 +39,39 @@ console.table(dinos);
 
 dinos.splice(1, 1); //remove o elemento a partir do índice 1, contando  1
 console.table(dinos)
+
+console.log("")
+console.log("--------------------Continuação Aula---------------------")
+var dinos = [
+    "Tricerátops",
+    "Tiranossauro Rex",
+    "Estegossauro",
+    "Anquilossauro",
+    "Brontossauro",
+    "Ictiossauro",
+    "Pterodáctilo",
+    "Espinossauro",
+];
+
+console.table(dinos);
+
+var elementoProcurado = "Brontossauro";
+var posicao = dinos.indexOf(elementoProcurado); //retorna o valor do índice da tabela
+console.log("O " + elementoProcurado + " está no índice " + posicao);
+
+var elementoProcurado = "Pterodáctilo";
+var posicao = dinos.indexOf(elementoProcurado);
+console.log("O " + elementoProcurado + " está no índice " + posicao);
+
+var elementoProcurado = "Tricerátops";
+var posicao = dinos.indexOf(elementoProcurado);
+console.log("O " + elementoProcurado + " está no índice " + posicao);
+
+//Criando cópia de array (vetor)
+var copia1 = dinos.slice(); //.slice() faz uma cópia real do item de vetor
+console.log("Vetor cópia 1");
+console.table(copia1);
+
+var copia2 = dinos.slice(1, 3); //.slice(1, 3) determino onde começa e onde termina a cópia
+console.log("Vetor cópia 2");
+console.table(copia2);
