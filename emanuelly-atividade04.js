@@ -33,7 +33,6 @@ console.log(
   matriz[0][2]
 );
 
-
 //Atividade de Criação de Cadastro de usuário
 console.log("--------------------------------------------------");
 var usuario = [
@@ -56,3 +55,12 @@ console.log(
 );
 console.log("Sua idade é", usuario[1], "e gosta muito da fruta", usuario[3]);
 console.log("Sua cor favorita é", usuario[2]);
+
+//Outra forma de fazer:
+console.log(`-------------------------------------------------`);
+console.log(`Olá ${usuario[0]}! Seja bem vinda ao nosso sistema.`);
+console.log(
+  `Você mora no endereço ${usuario[4]}, e tem um pet chamado ${usuario[5]}.`
+);
+console.log(`Sua idade é ${usuario[1]}, e gosta muito da fruta ${usuario[3]}.`);
+console.log(`Sua cor favorita é ${usuario[2]}.`);
