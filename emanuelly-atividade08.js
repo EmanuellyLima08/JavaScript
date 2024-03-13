@@ -38,7 +38,6 @@ const aluno1 = new Aluno(
 );
 aluno1.apresentar();
 
-
 //Crie e utilize uma classe "Sorvete" contendo as propriedades: sabor,
 //preço e tamanho (P | M | G)
 //Crie um sorvete de morango grande
@@ -57,7 +56,8 @@ class Sorvete {
       `O sorvete de ${this.sabor}, de tamanho ${this.tamanho}, custa R$ ${this.preco}!`
     );
   }
-  getPreco() { //encapsulamento - proteger 
+  getPreco() {
+    //encapsulamento - proteger
     return this.preco;
   }
   setPreco(novoPreco) {
@@ -73,3 +73,36 @@ sMelancia.criarSorvete();
 
 sMorango.setPreco(10.51);
 sMorango.criarSorvete();
+
+//Exercícios
+//1. Comparação de strings (sem case sensitive): Escreva uma função em JavaScript, que recebe duas strings e verifica se elas são iguais, ignorando o tamanho das letras (maiúsculas e minúsculas)
+console.log(`---------------------------------------------------`);
+function comparaStrings(string1, string2) {
+  if (string1.toLowerCase() === string2.toLowerCase()) {
+    //strings convertidas para minúsculas e feita a comparação
+    console.log("As strings são iguais.");
+  } else {
+    console.log("As strings são diferentes.");
+  }
+}
+comparaStrings("Olá, eu sou a Emanuelly", "Oi, sou o João");
+
+//2.Extrair números de uma string: Crie uma função em JavaScript que recebe uma string e retorna uma lista contendo apenas os números encontrados nela.
+console.log(`----------------------------------------------------`);
+function extraiNumeros(string) {
+  return string.match(/\d+/g) || []; //o método match() retorna um array contendo todas as correspondências encontradas na string ou null se não houver correspondências. || é utilizado para retornar um array vazio [] no caso de o resultado de match() ser null.
+}
+console.log(
+  //A função extrai esses números e os retorna em um array
+  extraiNumeros(
+    "Olá, meu nome é Emanuelly, tenho 16 anos, nasci no ano de 2008, tenho 2 pets!"
+  )
+);
+
+//3.Inverter a ordem das palavras em uma frase: Desenvolva uma função em JavaScript que recebe uma frase e retorna uma nova string com a ordem das palavras invertida.
+console.log(`----------------------------------------------------`);
+function inverteOrdemPalavras(frase) {
+  //a frase é primeiro dividida em um array de palavras usando o método split(" "), onde " " é o delimitador que separa as palavras. Isso retorna um array contendo todas as palavras da frase. reverse() inverte a ordem das palavras dentro do array. join(" ") junta todas as palavras do array em uma única string, separando-as novamente por um espaço. Isso cria a frase com a ordem das palavras invertida.
+  return frase.split(" ").reverse().join(" ");
+}
+console.log(inverteOrdemPalavras("Olá, meu nome é Emanuelly, tenho 16 anos!"));
