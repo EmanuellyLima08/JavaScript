@@ -37,3 +37,39 @@ const aluno1 = new Aluno(
   "Desenvolvimento de Sistemas"
 );
 aluno1.apresentar();
+
+
+//Crie e utilize uma classe "Sorvete" contendo as propriedades: sabor,
+//preço e tamanho (P | M | G)
+//Crie um sorvete de morango grande
+//Crie um sorvete de chocolate pequeno
+//Crie um sorvete de melância médio
+//Altere o preço do sorvete de morango grande para R$10,51
+console.log(`------------------------------------------------------`);
+class Sorvete {
+  constructor(sabor, preco, tamanho) {
+    this.sabor = sabor;
+    this.preco = preco;
+    this.tamanho = tamanho;
+  }
+  criarSorvete() {
+    console.log(
+      `O sorvete de ${this.sabor}, de tamanho ${this.tamanho}, custa R$ ${this.preco}!`
+    );
+  }
+  getPreco() { //encapsulamento - proteger 
+    return this.preco;
+  }
+  setPreco(novoPreco) {
+    this.preco = novoPreco;
+  }
+}
+const sMorango = new Sorvete("Morango", 9, "G");
+const sChocolate = new Sorvete("Chocolate", 3.5, "P");
+const sMelancia = new Sorvete("Melância", 6, "M");
+sMorango.criarSorvete();
+sChocolate.criarSorvete();
+sMelancia.criarSorvete();
+
+sMorango.setPreco(10.51);
+sMorango.criarSorvete();
